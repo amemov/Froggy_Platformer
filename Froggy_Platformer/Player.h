@@ -6,17 +6,24 @@
 #include "Character.h"
 class Player: public Character {
 	private: 
-		//std::vector <Item> Inventory;
+		int inventory_count;
 	public:
 		std::vector <Item> Inventory;
 		Player();
+		
 		void set_HP(int HP);
 		void set_ATTACK(int ATTACK);
 		void set_SPEED(int SPEED);
 		void set_JUMP(int JUMP);
-		void draw();
-	
-		friend Player& operator + (Player& what, Item t); // !!!!!!!!!!!!!!!!!!!!!! - seems resolved //
+
+		friend Player& operator += (Player& what, Item t);  
+		int get_inv_count() { return inventory_count; };
+		void set_inv_count(int count);
+		void print_inventory();
+		void use_inventory();
+		void save_inv();
+		
+		//void draw();
 
 };
 #endif

@@ -3,30 +3,38 @@
 #ifndef STDAFX_H
 #define STDAFX_H
 
-	// :0
-		#include <SDKDDKVer.h>  /* 'support' for different windows versions*/
+	// :0 Curses will be used in the future version of the game
+		//#include <SDKDDKVer.h>    /* 'support' for different windows versions*/
 		//#include <conio.h>		/* 'responsible' for moving player object */
-		#include <iostream>
-		#include <curses.h>	
-		//#include <windows.h>
+		//#include <curses.h>		/* Linux */
+		//#include <windows.h>		/* Windows */
+
+		#include <iostream>		
+		#include <iomanip>  
+		#include <sstream>
+		#include <thread>			/* sleep_for, sleep_until */  
+		#include <chrono>			/* nanoseconds, system_clock, seconds */  
+
+		#include <fstream>
 		#include <vector>
 		#include <string>
-		#include <stdlib.h>     /* srand, rand */
-		#include <time.h>		/* time */
+		#include <stdlib.h>        /* srand, rand */
+		#include <time.h>		   /* time */
 
 	// Map size boundries	
 		const int MAX_X = 30;
 		const int MAX_Y = 30;
+		const int def_lvl = 10;
 	
 	// Map, Characters, Items, and User Interface (UI) blocks ( ASCII numbers )
-	/*UI.	EDGE_TL = Edge Top Left */
+	/*UI.	EDGE_TL = Edge Top Left. (for Windows) */
 		#define BOUNDRY_SIDE_UI 179		 
 		#define BOUNDRY_TOPBOTTOM_UI 196   
 		#define BOUNDRY_EDGE_TL_UI 218	 
 		#define BOUNDRY_EDGE_TR_UI 191	 
 		#define BOUNDRY_EDGE_BL_UI 192	 
 		#define BOUNDRY_EDGE_BR_UI 217	 
-	/*Map*/
+	/*Map - for Windows! */
 		#define BIG_BLOCK 219  // bottom Rocks?
 		#define HALF_BLOCK 220 // bottom Grass?
 		#define CLEAN 32	   // empty block
@@ -41,12 +49,12 @@
 	//Default Stats for Characters//
 	/*Player*/
 		#define PLAYER_ATTACK 20
-		#define PLAYER_HP 180
+		#define PLAYER_HP 100
 		#define PLAYER_JUMP 2
 		#define PLAYER_SPEED 2
 	/*Enemy*/
-		#define ENEMY_ATTACK 30
-		#define ENEMY_HP 200
+		#define ENEMY_ATTACK 13
+		#define ENEMY_HP 150
 		#define ENEMY_SPEED 1
 	
 	//Key definitions//
@@ -55,31 +63,11 @@
 		#define DOWN  10001
 		#define RIGHT 10002
 		#define LEFT  10003
-	/*Actual keys*/
+	/*Actual keys - for conio.h (Windows)    */
 	/*	const int KEY_UP = 0x48;
 		const int KEY_DOWN = 0x50;
 		const int KEY_LEFT = 0x4b;
 		const int KEY_RIGHT = 0x4d;
 		const int KEY_ESCAPE = 0x1b;
 		const int KEY_RETURN = 0x0d;*/
-	// rewrite!!!!!!!!!!!!!!!!!!!!!!!!!!!	
-		enum color
-		{
-			black,
-			darkblue,
-			darkgreen,
-			darkcyan,
-			darkred,
-			darkpurple,
-			darkgray,
-			darkwhite,
-			gray,
-			blue,
-			green,
-			cyan,
-			red,
-			purple,
-			yellow,
-			white
-		};
 #endif

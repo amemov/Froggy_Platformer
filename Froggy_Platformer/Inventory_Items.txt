@@ -1,0 +1,6 @@
+// Poison and Sword are passive and aren't stored in the inventory
+Poison   1 -90
+Choky    1 45
+Sword    2 30
+Energy   3 2
+Snickers 4 2

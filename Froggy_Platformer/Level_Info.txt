@@ -1,0 +1,47 @@
+// Level info file. 
+// 10 - level_count ( increments by 10 ) 11 - level end
+// "something" - level name
+// 1 (or 2) - represents a choice that user can select
+
+10
+				"Awake"
+- Dream is a succession of images, ideas, emotions, and sensations
+  that usually occur involuntarily in the mind during certain stages of sleep.
+  However, some people say that dreams are manifestations of one's deepest desires
+  and anxieties, often relating to repressed childhood memories or obsessions.
+You have awaken. You opened your eyes and all you can see is pure satin void.  
+.You feel exhausted and tired. Should you stay in bed and rest(1) or should you try to wake up (2)?
+1You fell asleep. Your sleep was interupted by a nurse in the room.
+2You tried to move your legs, but you fell of the bed. Nurse came shortly to help you.
+- "Mr.Froggy, you have a visitor" - said nurse.
+- Door opened. Someone entered the room.
+- "Hello" - said visitor, "I am your virtual assistant".
+- "From now on you have to fight for your life in Virtuo to gain back your vision" - said visitor
+- "May the froggo and these items help you in the battle" - said visitor and left
+Choky    1 45
+*You gained choky milk*
+Sword    2 30
+*You gained sword(static item)*
+Energy   3 2
+*You gained energy(static item)*
+Snickers 4 2
+*You gained snickers*
+11
+20
+"End"
+Congratulations! You have reached the end of the demo! If you would like to start over, select New Game in the main menu!
+21
+
+
+
+
+
+
+
+//20
+//"Adjacent"
+//21
+//
+//30
+//"Interlude"
+//31

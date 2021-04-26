@@ -5,12 +5,12 @@
 class Character {
 	public:
 		// Character attributes
-		int HP;
-		int SPEED;
-		int ATTACK;
-		int X;
-		int Y;
-		int JUMP;
+		int HP = 0;
+		int SPEED = 0;
+		int ATTACK = 0;
+		int X = 0;
+		int Y = 0;
+		int JUMP = 0;
 
 	 
 		//Character(int HP, int ATTACK, int SPEED, int JUMP);
